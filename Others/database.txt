@@ -1,0 +1,28 @@
+
+create table students (
+studentID varchar2(10),
+first_name varchar2(25),
+mid_name varchar2(25),
+last_name varchar2(25),
+address varchar2(60),
+zipCode varchar2(10),
+city varchar2(15),
+state varchar2(10),
+phone varchar2(25),
+email varchar2(40),
+url varchar2(90),
+dte varchar2(20),
+gradMonth varchar2(15),
+gradYear varchar2(5),
+interest varchar2(20),
+recommend varchar2(15),
+primary key (studentID)
+);
+
+create table topicslike(
+studentID varchar2(10),
+choice varchar2(20),
+primary key(studentID,choice),
+foreign key (studentID) references students(studentID)
+);
+
